@@ -23,8 +23,10 @@ let windxpos;
 
 
 function setup() {
-  createCanvas(600, 600);
-  refresh();
+    let canvas = createCanvas(600, 600);
+    canvas.id("p5-canvas");
+    canvas.parent("p5-canvas-container");
+    refresh();
 
 }
 

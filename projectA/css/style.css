@@ -1,4 +1,4 @@
-/* CCLab CSS template project A */
+
 body {
     background-color: black;
     color: aliceblue;
@@ -57,13 +57,6 @@ body {
     padding-bottom: 40px;
 }
 
-/* Sketch placeholder */
-#p5-canvas-container img{
-    width: 800px;
-}
-
-
-
 /* home button */
 #home a {
     position: fixed;
@@ -81,3 +74,14 @@ body {
     color: black;
 }
 
+
+/* p5.js sketch */
+canvas {
+    display: block;
+}
+
+#p5-canvas-container {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
