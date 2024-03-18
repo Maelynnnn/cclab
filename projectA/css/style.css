@@ -1,4 +1,3 @@
-
 body {
     background-color: black;
     color: aliceblue;
@@ -80,8 +79,7 @@ canvas {
     display: block;
 }
 
-#p5-canvas-container {
-    position: absolute;
-    left: 100px;
-    top: 100px;
+#myContainer {
+    margin: auto;
+    width: 800px;
 }
