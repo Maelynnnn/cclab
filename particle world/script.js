@@ -53,8 +53,17 @@ class Particle {
     }
 
     for (let k = 0; k < this.butterflyX.length; k += 1) {
+      let noiseX = noise(k, frameCount * 0.01);
+      let noiseY = noise(k + 1000, frameCount * 0.01);
+      
+      let butterflySpeedX = map(noiseX, 0, 1, -this.butterflySpeed, this.butterflySpeed);
+      let butterflySpeedY = map(noiseY, 0, 1, -this.butterflySpeed, this.butterflySpeed);
+      
+      this.butterflyX[k] += 0.1 * butterflySpeedX;
+      this.butterflyY[k] += 0.1 * butterflySpeedY;
+      
       let d = dist(this.butterflyX[k], this.butterflyY[k], mouseX, mouseY);
-      if (d < 50) {
+      if (d < 100) {
         this.butterflyX[k] += random(-this.butterflySpeed, this.butterflySpeed);
         this.butterflyY[k] += random(-this.butterflySpeed, this.butterflySpeed);
         this.butterflySize[k] +=
