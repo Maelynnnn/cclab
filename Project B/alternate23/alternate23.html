@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alt23style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <title>Alternate1</title>
+</head>
+
+<body>
+    <div id="title"> Alternate No.2 & No.3 </div>
+
+    <div id="logo">
+        <img src="../info/logo.png" alt="logo">
+    </div>
+
+    <div id="bar"> LAB3 | Security level: 10 </div>
+
+    <div class="flex-container"> 
+        <div class="box" onclick="openPopupWarn()">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the second batch of specimens from Lab3, 
+                referred to as Alternate No.2 & Alternate No.3, 
+                serial numbers No. 4927462 and No. 4927463. 
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this version, the genetic defect at the 4p15.1-p16.1 locus has been repaired, 
+                and no other issues have been detected thus far. 
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The success of Alternate No.2 & Alternate No.3 marks a milestone in the live breeding experiment of Alternates. 
+                These specimens are currently under the supervision of Thomas Bhing 
+                from the Bioregulatory Department and await further research.
+            </p>
+        </div>
+
+        <div class="popup" id="pup">
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;They're lying.</p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alternate No.2 & Alternate No.3 were initially cultivated as genetic weapons built for the Combined Forces, 
+                possessing an offensive power that exceeds that of humans, and can self-replicate and multiply indefinitely. 
+                During the monitoring process, we found that the aggressiveness and learning ability of these two samples grew much faster than expected, 
+                and more seriously, Alternate No.2 & Alternate No.3 appeared to be actively replicating humans.
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alternate's Human-based replicates have the same appearance as the parent human samples, 
+                are self-aware, and have shown aggressive behavior towards the parent human samples. 
+                With the exception of Alternate No.2 & Alternate No.3, all Alternate replicates have been destroyed.
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cultivation of Alternate No.2 & Alternate No.3 has gradually exceeded LAB3's control, and we have decided to destroy these two samples in secret.
+            </p>
+            <button onclick="closePopupWarn()">X</button>
+        </div>
+
+        <script>
+            function openPopupWarn() {
+                var popup = document.getElementById("pup");
+                popup.classList.add("active");
+            }
+
+            function closePopupWarn() {
+                var popup = document.getElementById("pup");
+                popup.classList.remove("active");
+            }
+            </script>
+
+        <div class="container">
+            <div id="image1">
+                <img src="23.jpg" alt="alt1">
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="image2">
+                <img src="gene.png" alt="alt1">
+            </div>
+        </div>
+        <div class="box"></div>
+
+    </div>
+
+
+
+    <div id="popupContainer" class="popup-container" onclick="closePopup()">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <span class="close-btn"></span>
+            <div class="popup-content"> How can you be sure that everyone you've ever met in your life is human? </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            
+            setTimeout(function() {
+                openPopup();
+            }, 1000);
+        };
+        function openPopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "block";
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "none";
+        }
+    </script>
+
+
+    <button id="backButton" onclick="goBack()">BACK</button>
+    <script>
+        function goBack() {
+            window.location.href = "../info/info.html";
+        }
+    </script>
+
+
+</body>
+
+</html>

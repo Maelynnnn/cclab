@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alternate1style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <title>Alternate1</title>
+</head>
+
+<body>
+    <div id="title"> Alternate No.1 </div>
+
+    <div id="logo">
+        <img src="../info/logo.png" alt="logo">
+    </div>
+
+    <div id="bar"> LAB3 | Security level: 10 </div>
+
+
+    <div class="flex-container">
+        <div class="box">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This was LAB3's first alternate subject, Alternate No.1.
+                After 12 months of incubation, due to a genetic gap that resulted in the mutation and eventual breakage of
+                his right leg.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alternate No.1 lost his vitals on April 18, 2005. Alternate No.1 was declared a failure.</p>
+        </div>
+        <div class="container">
+            <div id="image1">
+                <img src="alt1Front.jpg" alt="alt1">
+            </div>
+
+            <div class="textFront">
+                <p>No. 4927461</p>
+                <p>Mutant locus: 4p15.1-p16.1</p>
+                <p>Mutation: c.2052delA</p>
+                <p>Protein mutation: p.Ala3_Ser5del</p>
+            </div>
+        </div>
+        <div class="container">
+            <div id="image2">
+                <img src="alt1Face.jpg" alt="alt2">
+            </div>
+
+            <div class="textFrontRight">
+                <p>Date of death: April 18, 2005</p>
+                <p>Specimen number: C-4927461</p>
+                <p>Storage: Biological Control Room</p>
+                <p>Preservation method: whole blood</p>
+                <p>Drug specification: tertiary culture fluid</p>
+            </div>
+        </div>
+
+        <div class="warn" onclick="openPopup()">
+            <p>Warning!</p>
+            <p>The specimen was reported stolen on April 16, 2024</p>
+        </div>
+
+        <div class="popup" id="pup">
+            <p>Yes, I'm the one who stole it.</p>
+            <button onclick="closePopup()">X</button>
+        </div>
+
+        <script>
+            function openPopup() {
+                var popup = document.getElementById("pup");
+                popup.classList.add("active");
+            }
+
+            function closePopup() {
+                var popup = document.getElementById("pup");
+                popup.classList.remove("active");
+            }
+            </script>
+
+    </div>
+
+
+    <button id="backButton" onclick="goBack()">BACK</button>
+    <script>
+        function goBack() {
+            window.location.href = "../info/info.html";
+        }
+    </script>
+
+
+</body>
+
+</html>

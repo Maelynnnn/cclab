@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="info_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+    <script src="../highre/sketch.js"></script>
+
+</head>
+<body>
+
+        <div id="title"> Case 1001 </div>
+
+    <div id="logo">
+        <img src="logo.png" alt="logo">
+    </div>
+
+    <div id="bar"> LAB3 | Security level: 10 </div>
+
+    <div class="flex-container">
+        <div class="casebox center" onclick="redirectToNextPage()"> Important</div>
+        <script>
+            function redirectToNextPage() {
+                window.location.href = "../important/imp.html";
+            }
+        </script>
+        <div class="casebox center" onclick="redirectToNextPage1()" > Alternate No.1</div>
+        <script>
+            function redirectToNextPage1() {
+                window.location.href = "../alternate1/alternate1.html";
+            }
+        </script>
+        <div class="casebox center" onclick="redirectToNextPage2()"> Alternate No.2 & No.3</div>
+        <script>
+            function redirectToNextPage2() {
+                window.location.href = "../alternate23/alternate23.html";
+            }
+        </script>
+        <div class="casebox center" onclick="redirectToNextPage3()" > Emergency</div>
+        <script>
+            function redirectToNextPage3() {
+                window.location.href = "../emergancy/emergancy.html";
+            }
+        </script>
+
+        <div class="casebox1 center" onclick="openPopupWarn()" > Higher Security Level Required </div>
+        <div class="popup" id="pup">
+            <div id="popup-content"></div>
+        </div>
+        <script>
+            function openPopupWarn() {
+                var popup = document.getElementById("pup");
+                popup.classList.add("active");
+
+                var script = document.createElement('script');
+                script.src = "../highre/sketch.js";
+                document.getElementById('popup-content').appendChild(script);
+
+                setTimeout(function() {
+                    window.location.href = '../test/test.html';
+                }, 7000);
+            }
+        </script>
+        <script src="../highre/sketch.js"></script>
+    </div>
+
+</body>
+
+
+</html>

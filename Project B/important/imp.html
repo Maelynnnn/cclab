@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imp_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <title>Important</title>
+</head>
+<body>
+
+    <div id="title" onclick="playAudio()"> Important </div>
+    <audio id="myAudio" src="drChan.mp3"></audio>
+
+    <div id="logo">
+        <img src="../info/logo.png" alt="logo">
+    </div>
+
+    <div id="bar"> LAB3 | Security level: 10 </div>
+
+    <div class="boxWords"> 
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Congratulations on finding this site. In order to guard the secret, 
+            I split the site address and the key to access this site, and it seems you got both.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Since that incident, all the LAB3 members who knew the secret have been "optimized".
+             I know I can't get away with it either, 
+            but it's a matter of such importance that it could affect the entire human race.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; I left a few clues about it in my last hours, 
+            and I've put them on this website.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;From the moment you learn this secret, the people of LAB3 may be after you, 
+            so please be careful.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;It's up to you whether this secret will ever see the light of day again.</p>
+    </div>
+    <div class="boxWarn"> Please remember, DON'T TRUST ANYONE! </div>
+
+    <button id="backButton" onclick="goBack()">BACK</button>
+    <script>
+        function goBack() {
+            window.location.href = "../info/info.html";
+            }
+    </script>
+
+    <div id="popupContainer" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <img src="popup.png" alt="Your Image" class="popup-image">
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                alert("STAY SAFE");
+            }, 5000);
+            setTimeout(function() {
+                openPopup();
+            }, 18000);
+        };
+        function openPopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "block";
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function playAudio() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+        }
+    </script>
+
+
+</body>
+</html>
