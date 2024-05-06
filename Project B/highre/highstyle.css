@@ -1,0 +1,35 @@
+body{
+  background-color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.black{
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  padding: 10px;
+  
+}
+
+.box {
+  text-align: left;
+  padding: 10px 10px;
+  margin: 3px;
+}
+
+.box_1{
+  display: flex;
+  justify-content:center;
+}
+canvas {
+  display: block;
+}
+
+#p5-container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

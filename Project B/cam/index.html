@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/addons/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+
+    <script>
+      setTimeout(function() {
+                    window.location.href = '../info/info.html';
+                }, 18000);
+    </script>
+
+  <audio id="background-audio" autoplay loop>
+    <source src="jump1.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="time"></div>
+    <div class="datecontainer">
+        <div class="date" id="current-date"></div>
+    </div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('time').textContent = timeString;
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+
+    <script>
+        const currentDate = new Date();
+        const formattedDate = currentDate.toISOString().slice(0, 10);
+        document.getElementById('current-date').innerText = formattedDate;
+    </script>
+    
+
+
+
+  </body>
+</html>

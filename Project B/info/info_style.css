@@ -80,6 +80,7 @@ body{
     background-color: rgb(30, 30, 30);
     font-size: 4vw;
     font-family: "Jersey 25", sans-serif;
+    cursor: pointer; 
 }
 
 .casebox:hover{
@@ -94,6 +95,7 @@ body{
     background-color: rgb(77, 12, 12);
     font-size: 4vw;
     font-family: "Jersey 25", sans-serif;
+    cursor: pointer; 
 }
 
 .casebox1:hover{

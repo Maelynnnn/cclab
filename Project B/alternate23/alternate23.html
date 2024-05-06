@@ -75,15 +75,53 @@
 
         <div class="container">
             <div id="image1">
-                <img src="23.jpg" alt="alt1">
+                <img src="23.jpg" alt="alt1" onclick="openPopupalt23()">
             </div>
         </div>
 
+        <div class="popup" id="alt23">
+            <p> Alternate 2 & Alternate 3</p>
+            <button onclick="closePopupalt23()">X</button>
+        </div>
+
+
+        <script>
+            function openPopupalt23() {
+                var popup = document.getElementById("alt23");
+                popup.classList.add("active");
+            }
+
+            function closePopupalt23() {
+                var popup = document.getElementById("alt23");
+                popup.classList.remove("active");
+            }
+        </script>
+
+
         <div class="container">
             <div id="image2">
-                <img src="gene.png" alt="alt1">
+                <img src="gene.png" alt="alt1" onclick="openPopupgene()">
             </div>
         </div>
+        
+        <div class="popup" id="gene">
+            <p> Repaired genes</p>
+            <button onclick="closePopupgene()">X</button>
+        </div>
+        
+
+        <script>
+            function openPopupgene() {
+                var popup = document.getElementById("gene");
+                popup.classList.add("active");
+            }
+
+            function closePopupgene() {
+                var popup = document.getElementById("gene");
+                popup.classList.remove("active");
+            }
+        </script>
+
         <div class="box"></div>
 
     </div>

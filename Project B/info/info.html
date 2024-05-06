@@ -49,29 +49,20 @@
         <div class="casebox center" onclick="redirectToNextPage3()" > Emergency</div>
         <script>
             function redirectToNextPage3() {
-                window.location.href = "../emergancy/emergancy.html";
+                window.location.href = "../emergency/emergency.html";
             }
         </script>
 
-        <div class="casebox1 center" onclick="openPopupWarn()" > Higher Security Level Required </div>
-        <div class="popup" id="pup">
-            <div id="popup-content"></div>
-        </div>
+        <div class="casebox1 center" onclick="redirectToNextPage4()" > Higher Security Level Required </div>
+
         <script>
-            function openPopupWarn() {
-                var popup = document.getElementById("pup");
-                popup.classList.add("active");
+            function redirectToNextPage4() {
+                window.location.href = "../highre/highindex.html";
 
-                var script = document.createElement('script');
-                script.src = "../highre/sketch.js";
-                document.getElementById('popup-content').appendChild(script);
-
-                setTimeout(function() {
-                    window.location.href = '../test/test.html';
-                }, 7000);
             }
+
         </script>
-        <script src="../highre/sketch.js"></script>
+
     </div>
 
 </body>

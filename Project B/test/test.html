@@ -19,24 +19,107 @@
 <body>
     <div id="title"> Alternative Biological Leakage </div>
 
-    <div id="logo">
+    <!-- <div id="logo">
         <img src="../info/logo.png" alt="logo">
-    </div>
+    </div> -->
 
     <div id="bar"> LAB3 | Security level: 10 </div>
 
-    <div class="box">
+    <div id="video-container">
+        <video id="video-background" autoplay loop muted>
+            <source src="glitchVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div class="boxCenter">
         <p>Now you are forced to take the test </p>
         <p>to prove that you are not an Alternate</p>
     </div>
 
 
-    <button id="backButton" onclick="goBack()">BACK</button>
+    <div id="popupContainer" class="popup-container">
+            <div class="popup-content"> 
+                <p>The test will begin in </p>
+                <p><span id="timer">10</span> seconds </p>
+            </div>
+    </div>
+
     <script>
-        function goBack() {
-            window.location.href = "../info/info.html";
+        let timeLeft = 15;
+        let endtime = 5;
+        const timerElement = document.getElementById('timer');
+        const countdown = setInterval(function() {
+            if (timeLeft >=0){
+                timerElement.textContent = timeLeft;
+            }else{
+                timerElement.textContent = 'ENJOY';
+            }
+            timeLeft--;
+            if (timeLeft < 0) {
+                endtime -= 1
+                if (endtime < 0){
+                    window.location.href = '../testIns/testContent.html';
+                }
+            }
+        }, 1000);
+    </script>
+
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                openPopup();
+            }, 6000);
+        };
+        function openPopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "block";
         }
     </script>
+
+    <audio id="background-audio" autoplay loop>
+        <source src="testEnterBgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        window.addEventListener('beforeunload', function() {
+        const audio = document.getElementById('background-audio');
+        sessionStorage.setItem('audioCurrentTime', audio.currentTime);
+    });
+    </script>
+
+
+
+    <div id="time"></div>
+    <div class="datecontainer">
+        <div class="date" id="current-date"></div>
+    </div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('time').textContent = timeString;
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+
+    <script>
+        const currentDate = new Date();
+        const formattedDate = currentDate.toISOString().slice(0, 10);
+        document.getElementById('current-date').innerText = formattedDate;
+    </script>
+
     
 </body>
 </html>
